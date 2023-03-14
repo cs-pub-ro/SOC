@@ -17,31 +17,38 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module task02_test;
-    // Inputs
+    // Input
     reg [1:0] sel;
     reg in;
     
-    // Outputs
+    // Output
     wire [3:0] out;
     
-    // Instantiate the Unit Under Test (UUT)
+    // Initializare Unit Under Test (UUT)
     task02 uut (
         // TODO: legati intrarile si iesirile la porturile corespunzatoare
         );
     
     initial begin
-        // Initialize Inputs
+        // Initializare Input
         sel = 0;
         in = 0;
         
         // Wait 100 ns for global reset to finish
         #100;
-        
-        // Add stimulus here
+
         in = 1;
         
-        #100 sel = 1;
-        #100 sel = 2;
-        #100 sel = 3;
+        #100
+        
+        sel = 1;
+        
+        #100
+        
+        sel = 2;
+        
+        #100
+        
+        sel = 3;
     end
 endmodule

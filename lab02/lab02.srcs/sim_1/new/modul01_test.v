@@ -17,26 +17,25 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module modul01_test;
-    // Inputs
+    // Input
     reg in;
 
-    // Outputs
+    // Output
     wire out;
 
-    // Instantiate the Unit Under Test (UUT)
+    // Instantiere Unit Under Test (UUT)
     modul01 uut (
         .out(out),
         .in(in)
     );
 
     initial begin
-        // Initialize Inputs
+        // Initializare Input
         in = 0;
 
-        // Wait 100 ns for global reset to finish
+        // Asteapta 100ns
         #100;
 
-        // Add stimulus here
         in = 1;
     end
 endmodule

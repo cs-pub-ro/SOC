@@ -17,26 +17,25 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module task01_test;
-    // Inputs
+    // Input
     reg in1, in2;
 
-    // Outputs
+    // Output
     wire out;
 
-    // Instantiate the Unit Under Test (UUT)
+    // Initializare Unit Under Test (UUT)
     task01 uut (
         // TODO: legati intrarile si iesirile la porturile corespunzatoare
     );
 
     initial begin
-        // Initialize Inputs
+        // Initializare Input
         in1 = 0;
         in2 = 0;
 
-        // Wait 100 ns for global reset to finish
+        // Asteapta 100ns
         #100;
 
-        // Add stimulus here
         in1 = 0;
         in2 = 1;
         
@@ -49,6 +48,5 @@ module task01_test;
         
         in1 = 1;
         in2 = 1;
-        
     end
 endmodule

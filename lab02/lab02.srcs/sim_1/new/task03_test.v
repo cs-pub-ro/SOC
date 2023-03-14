@@ -16,13 +16,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module task03_test;
-    // Inputs
+    // Input
     reg clk_in;
     
-    // Outputs
+    // Output
     wire clk_out;
     
-    // Instantiate the Unit Under Test (UUT)
+    // Instantiere Unit Under Test (UUT)
     task03 uut (
         // TODO: legati intrarile si iesirile la porturile corespunzatoare
         );
@@ -32,14 +32,13 @@ module task03_test;
     end
     
     initial begin
-        // Initialize Inputs
+        // Initializare Input
         clk_in = 0;
         
-        // Wait 100 ns for global reset to finish
+        // Asteapta 100ns
         #100;
         
-        // Add stimulus here
-        clk_in = 0;
+        clk_in = 1;
     end
 endmodule
 
