@@ -22,7 +22,7 @@ module modul03(
     );
 
     always @(*) begin
-        out = !in;
+        out = ~in;
     end
 
 endmodule
