@@ -14,7 +14,7 @@ module task1(
 
     //TODO calculate -1 * Divisor 
     wire [3:0] l_w_neg_M;
-    assign l_w_neg_M = ~i_w_M + 1;
+    assign l_w_neg_M = ~i_w_divisor + 1;
 
     always @(*) begin
         // TODO1: 
