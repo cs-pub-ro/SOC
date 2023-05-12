@@ -21,7 +21,7 @@ module alu(
             //OR
             4'd3: l_r_result = i_w_a | i_w_b;
             //NEG
-            4'd4: l_r_result = i_w_a + 32'd1;
+            4'd4: l_r_result = ~i_w_a + 32'd1;
             //ADD
             4'd5: l_r_result = i_w_a + i_w_b;
             //SUB
