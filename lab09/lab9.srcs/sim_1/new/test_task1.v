@@ -35,7 +35,7 @@ module test_task1;
         l_r_reset = 1;
         #10;
         l_r_reset = 0;
-        wait(l_w_program_counter == 8'd40);
+        wait(l_w_program_counter == 8'd42);
         //finish the simulation
         $finish;
     end
