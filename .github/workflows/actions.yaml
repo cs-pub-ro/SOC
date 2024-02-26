@@ -1,0 +1,25 @@
+name: Linter Actions Workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verible-linter:
+    name: Verible Linter
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: chipsalliance/verible-linter-action@main
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  super-linter:
+    name: Super Linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Super Linter
+        uses: open-education-hub/actions/super-linter@main
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
