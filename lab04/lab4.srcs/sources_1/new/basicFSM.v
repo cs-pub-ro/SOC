@@ -58,8 +58,9 @@ module basicFSM (
                 else
                     l_r_nextState = STATE_2 ;
             end
-            //Stari pentru tratarea erorilor
-            //Daca automatul ajunge  n aceste stari se va reseta.
+
+            // Stări pentru tratarea erorilor
+            // Dacă automatul ajunge în aceste stări se va reseta.
             STATE_5_PlaceHolder : begin
                 l_r_nextState = STATE_Initial ;
             end
