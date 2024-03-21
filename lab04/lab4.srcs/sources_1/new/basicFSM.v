@@ -29,7 +29,7 @@ module basicFSM (
     end
 
     // --------------------------------------------------------------------
-    // Tranzi?ie condi?ionat?: bloc always@ ( * ) 
+    // Tranziție condiționată: bloc always@ ( * ) 
     // --------------------------------------------------------------------
     always@ ( * ) begin
         l_r_nextState = l_r_currentState ;
