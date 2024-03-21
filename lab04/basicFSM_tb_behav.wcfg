@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="basicFSM_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="basicFSM_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="109.024 ns"></ZoomEndTime>
+      <Cursor1Time time="70.087 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="295"></NameColumnWidth>
+      <ValueColumnWidth column_width="191"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/basicFSM_tb/l_r_clk" type="logic">
+      <obj_property name="ElementShortName">l_r_clk</obj_property>
+      <obj_property name="ObjectShortName">l_r_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/basicFSM_tb/l_r_in" type="logic">
+      <obj_property name="ElementShortName">l_r_in</obj_property>
+      <obj_property name="ObjectShortName">l_r_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/basicFSM_tb/l_w_out" type="logic">
+      <obj_property name="ElementShortName">l_w_out</obj_property>
+      <obj_property name="ObjectShortName">l_w_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/basicFSM_tb/fsm/l_r_currentState" type="array">
+      <obj_property name="ElementShortName">l_r_currentState[2:0]</obj_property>
+      <obj_property name="ObjectShortName">l_r_currentState[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
