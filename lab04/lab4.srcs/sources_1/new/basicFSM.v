@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 
 module basicFSM (
-	output wire Output,
-	input wire Reset,
-	input wire Clock,
-	input wire Input
+	output wire o_w_out,
+	input wire i_w_reset,
+	input wire i_w_clock,
+	input wire i_w_in
 );
 
 	localparam STATE_Initial = 3'd0,
@@ -16,58 +16,58 @@ module basicFSM (
                STATE_6_PlaceHolder = 3'd6 ,
                STATE_7_PlaceHolder = 3'd7;
 
-    reg [2:0] CurrentState ;
-    reg [2:0] NextState ;
+    reg [2:0] l_r_currentState ;
+    reg [2:0] l_r_nextState ;
     
-    assign Output = ( CurrentState == STATE_4 );
+    assign o_w_out = ( l_r_currentState == STATE_4 );
     
-    always@ ( posedge Clock ) begin
-      if ( Reset ) 
-        CurrentState <= STATE_Initial ;
+    always@ ( posedge i_w_clock ) begin
+      if ( i_w_reset ) 
+        l_r_currentState <= STATE_Initial ;
       else 
-        CurrentState <= NextState ;
+        l_r_currentState <= l_r_nextState ;
     end
 
     // --------------------------------------------------------------------
     // Tranzi?ie condi?ionat?: bloc always@ ( * ) 
     // --------------------------------------------------------------------
     always@ ( * ) begin
-        NextState = CurrentState ;
+        l_r_nextState = l_r_currentState ;
  
-        case ( CurrentState )
+        case ( l_r_currentState )
             STATE_Initial : begin
-                NextState = STATE_1 ;
+                l_r_nextState = STATE_1 ;
             end
             STATE_1 : begin
-                if (!Input)
-                    NextState = STATE_2 ;
+                if (!i_w_in)
+                    l_r_nextState = STATE_2 ;
             end
             STATE_2 : begin
-                if (Input)
-                    NextState = STATE_3 ;
+                if (i_w_in)
+                    l_r_nextState = STATE_3 ;
             end
             STATE_3 : begin
-                if (Input)
-                    NextState = STATE_4 ;
+                if (i_w_in)
+                    l_r_nextState = STATE_4 ;
                 else
-                    NextState = STATE_2 ;
+                    l_r_nextState = STATE_2 ;
             end
             STATE_4 : begin
-                if (Input)
-                    NextState = STATE_1 ;
+                if (i_w_in)
+                    l_r_nextState = STATE_1 ;
                 else
-                    NextState = STATE_2 ;
+                    l_r_nextState = STATE_2 ;
             end
             //Stari pentru tratarea erorilor
             //Daca automatul ajunge  n aceste stari se va reseta.
             STATE_5_PlaceHolder : begin
-                NextState = STATE_Initial ;
+                l_r_nextState = STATE_Initial ;
             end
             STATE_6_PlaceHolder : begin
-                NextState = STATE_Initial ;
+                l_r_nextState = STATE_Initial ;
             end
             STATE_7_PlaceHolder : begin
-                NextState = STATE_Initial ;
+                l_r_nextState = STATE_Initial ;
             end
         endcase
     end

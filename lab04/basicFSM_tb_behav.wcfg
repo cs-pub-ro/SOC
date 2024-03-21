@@ -32,9 +32,9 @@
       <obj_property name="ElementShortName">l_w_out</obj_property>
       <obj_property name="ObjectShortName">l_w_out</obj_property>
    </wvobject>
-   <wvobject fp_name="/basicFSM_tb/fsm/CurrentState" type="array">
-      <obj_property name="ElementShortName">CurrentState[2:0]</obj_property>
-      <obj_property name="ObjectShortName">CurrentState[2:0]</obj_property>
+   <wvobject fp_name="/basicFSM_tb/fsm/l_r_currentState" type="array">
+      <obj_property name="ElementShortName">l_r_currentState[2:0]</obj_property>
+      <obj_property name="ObjectShortName">l_r_currentState[2:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>
