@@ -1,24 +1,6 @@
 `timescale 1ns / 1ps
 `include "defines.vh"
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    08:24:33 04/04/2019 
-// Design Name: 
-// Module Name:    adder_subtractor 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
 module task3(
 		output wire o_w_digit_point,
 		output wire [0:6] o_w_segment,
