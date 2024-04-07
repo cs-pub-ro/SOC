@@ -6,7 +6,7 @@
 //  
 // Module Name:  		task1
 // Project Name:		Laborator 8
-// Target Devices: 		Digilent Artix 7
+// Target Devices: 		Digilent Nexys 7
 //////////////////////////////////////////////////////////////////////////////////
 
 module task1(

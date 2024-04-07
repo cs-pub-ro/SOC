@@ -7,7 +7,7 @@
 //  
 // Module Name:  		display_7_segment_driver
 // Project Name:		Laborator 8
-// Target Devices: 		Digilent Artix 7
+// Target Devices: 		Digilent Nexys 7
 //////////////////////////////////////////////////////////////////////////////////
 
 module display_7_segment_driver(

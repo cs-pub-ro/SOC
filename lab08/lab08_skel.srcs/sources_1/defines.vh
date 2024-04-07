@@ -4,7 +4,7 @@
 //  
 // Module Name:  		defines
 // Project Name:		Laborator 8
-// Target Devices: 		Digilent Artix 7
+// Target Devices: 		Digilent Nexys 7
 //////////////////////////////////////////////////////////////////////////////////
 
 // DO NOT CHANGE THIS FILE
