@@ -1,10 +1,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 // ACS
-// Computer Organization and Architecture
+// Computer Design 1
 //  
 // Module Name:  		defines
-// Project Name:		Laborator 8
-// Target Devices: 		Digilent Nexys 7
+// Project Name:		Laborator 6
+// Target Devices: 		Digilent Nexys 3
 //////////////////////////////////////////////////////////////////////////////////
 
 // DO NOT CHANGE THIS FILE
