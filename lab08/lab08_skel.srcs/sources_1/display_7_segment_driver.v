@@ -3,11 +3,11 @@
 
 //////////////////////////////////////////////////////////////////////////////////
 // ACS
-// Computer Design 1
+// Computer Organization and Architecture
 //  
 // Module Name:  		display_7_segment_driver
-// Project Name:		Laborator 6
-// Target Devices: 		Digilent Nexys 3
+// Project Name:		Laborator 8
+// Target Devices: 		Digilent Nexys 7
 //////////////////////////////////////////////////////////////////////////////////
 
 module display_7_segment_driver(
@@ -48,11 +48,11 @@ module display_7_segment_driver(
 			l_r_current_state <= DIGIT_0;
 			l_r_state_timer <= 0;
 		end else begin
-			l_r_state_timer <= l_r_state_timer + 10'd1;
 			if (l_r_state_timer == 1000) begin
 				l_r_state_timer <= 0;
 				l_r_current_state <= l_r_next_state;
-			end
+			end else
+				l_r_state_timer <= l_r_state_timer + 10'd1;
 		end
 	end
 	

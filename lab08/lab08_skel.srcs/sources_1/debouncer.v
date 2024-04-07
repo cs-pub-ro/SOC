@@ -2,11 +2,11 @@
 
 //////////////////////////////////////////////////////////////////////////////////
 // ACS
-// Computer Design 1
+// Computer Organization and Architecture
 //  
 // Module Name:  		debouncer
-// Project Name:		Laborator 6
-// Target Devices: 		Digilent Nexys 3
+// Project Name:		Laborator 8
+// Target Devices: 		Digilent Nexys 7
 //////////////////////////////////////////////////////////////////////////////////
 
 module debouncer(
