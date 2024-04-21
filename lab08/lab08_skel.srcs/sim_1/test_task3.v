@@ -54,7 +54,6 @@ module test_task3;
 
         l_r_clk = 0;
         l_r_reset = 1;
-        l_r_in = 0;
         #10;
         l_r_reset = 0;
 
