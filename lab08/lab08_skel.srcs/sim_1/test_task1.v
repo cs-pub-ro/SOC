@@ -25,8 +25,8 @@ module test_task1;
     task1 l_m_task1(
         .o_w_quotient(l_w_quotient),
         .o_w_remainder(l_w_remainder),
-        .i_w_dividend(l_r_dividend),
-        .i_w_divisor(l_r_divisor)
+        .i_w_Q(l_r_dividend),
+        .i_w_M(l_r_divisor)
     );
     
     // Simulation tests
