@@ -1,85 +1,69 @@
 `timescale 1ns / 1ps
+
+// HINT: Folositi urmatoarele constante pentru
+//       a atribui culoarea LED-ului
+`define COLOR_NONE 3'b000
+`define COLOR_RED 3'b100
+`define COLOR_YELLOW 3'b110
+`define COLOR_GREEN 3'b010
+
 module ex3(
-	output reg [7:0] o_r_out,
-	input wire       i_w_button,
-	input wire       i_w_reset,
-	input wire       i_w_clk
+    output [2:0] o_r_rgb_cars,  // Semnal cu PWM aplicat
+    input i_w_button,
+    input i_w_reset,
+    input i_w_clk
 );
 
-	localparam STATE_INITIAL = 0;
-	localparam STATE_T00 = 1;
-	localparam STATE_T01 = 2;
-	localparam STATE_PLACEHOLDER = 3;
-
-	reg l_r_button_pressed;
-	wire l_w_button_debounced;
-
-	debouncer db(l_w_button_debounced, i_w_clk, i_w_reset, i_w_button);
-
-	// INFO: Folositi l_r_red si l_r_green pentru a monitoriza
-	//       intervalele de timp care intarzie tranzitiile
-	reg [31:0]  l_r_red;
-	reg [31:0]  l_r_green;
-	reg [1:0]   l_r_currentState;
-	reg [1:0]   l_r_nextState;
-
-	initial begin
-		l_r_red = 0;
-		l_r_green = 0;
-		l_r_currentState = STATE_INITIAL;
-		l_r_button_pressed = 0;
-	end
-
-	// INFO: Scopul acestui task este gestionarea aprinderii celor 8 LED-uri
-	//       de pe FPGA. Fiecare LED este controlat de un bit din o_r_out.
-	//       
-	//       Blocul always va gestiona atat logica iesirilor si a tranzitiilor,
-    //       cat si de efectuarea tranzitiilor cu delay-urile aferente.
-	//       Asadar, va trebui sa setati atat valoarea iesirii, cat si
-	//       valoarea starii urmatoare l_r_nextState la momentul potrivit.
-		
-	always @(posedge i_w_clk) begin
-		case (l_r_currentState)
-			STATE_INITIAL: begin
-				o_r_out = 8'b00000000;
-				l_r_nextState = STATE_T00;
-			end
-			STATE_T00: begin
-				// TODO: Aprindeti primele 4 LED-uri din stanga.
-				
-				
-				// TODO: Daca este apasat butonul, marcati acest lucru folosind
-				//       flag-ul l_r_button_pressed si initializati timer-ul
-				//       culorii rosii.
-				//       O apasare ulterioara nu reseteaza timer-ul.
-				if (l_w_button_debounced) begin
-				
-				end
-
-				// TODO: Daca butonul a fost apasat, folositi timer-ul
-				//       pentru a cronometra intervalul corespunzator culorii rosii.
-				// HINT: Folositi counter-ele!
-				if (l_r_button_pressed) begin
-				
-				end
-			end
-
-			STATE_T01: begin
-				// TODO: Aprindeti ultimele 4 LED-uri din dreapta.
-				
-				
-				// TODO: Starea curenta nu mai este influentata de apasarea
-				//       butonului, astfel trebuie resetat flag-ul care indica
-				//       acest lucru.
-				
-				
-				// TODO: Porniti timer-ul care trebuie sa cronometreze
-				//       intervalul corespunzator culorii verzi.
-				// HINT: Folositi counter-ele!
-				
-			end
-		endcase
-		
-		l_r_currentState = l_r_nextState;
-	end
+    // TODO: Definiti starile automatului
+    // localparam STATE_*** = 0; ...
+    
+    // Modul de debounce pentru butonul de pietoni
+    reg l_r_button_pressed;
+    wire l_w_button_debounced;
+    debouncer l_m_db(l_w_button_debounced, i_w_clk, i_w_reset, i_w_button);
+    
+    reg [31:0]  l_r_count;
+    reg [1:0]   l_r_currentState;
+    reg [1:0]   l_r_nextState;
+    
+    // INFO: Blocul always va gestiona atat logica iesirilor si a tranzitiilor,
+    //       cat si efectuarea tranzitiilor cu delay-urile aferente.
+    //       Asadar, va trebui sa setati atat valoarea iesirii, cat si
+    //       valoarea starii urmatoare l_r_nextState la momentul potrivit.
+    
+    // Registrul pe care il veti folosi pentru culorile semaforului
+    reg [2:0]   l_r_cars;
+    
+    always @(posedge i_w_clk) begin
+        if (i_w_reset == 1) begin
+            // TODO: Setati starea si culoarea initiala
+            // l_r_button_pressed <= ...
+            // l_r_count <= ...
+        end else begin
+            // HINT: Nu uitati de incrementarea contorului
+            
+            if (l_w_button_debounced == 1) begin
+                // TODO: Daca este apasat butonul, marcati acest lucru folosind
+                //       flag-ul l_r_button_pressed si initializati timer-ul.
+            end
+            
+            case(l_r_currentState)
+                // TODO: Implementati tranzitiile intre stari
+                // STATE_***: begin
+                // ...                    
+                // end
+                
+                // HINT: Nu uitati sa atribuiti starea urmatoare si
+                //       sa resetati counter-ul/flag-ul butonului
+                //       la momentul potrivit
+            endcase
+        end
+    end
+    
+    // Diminuam intensitatea LED-ului
+    rgb_pwm l_m_cars (
+        .o_r_out(o_r_rgb_cars),
+        .i_w_in(l_r_cars),
+        .i_w_clk(i_w_clk)
+    );
 endmodule

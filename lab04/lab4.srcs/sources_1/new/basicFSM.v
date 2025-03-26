@@ -29,7 +29,7 @@ module basicFSM (
     end
 
     // --------------------------------------------------------------------
-    // Tranziție condiționată: bloc always@ ( * ) 
+    // Tranzitie conditionata: bloc always@ ( * ) 
     // --------------------------------------------------------------------
     always@ ( * ) begin
         l_r_nextState = l_r_currentState ;
@@ -59,8 +59,8 @@ module basicFSM (
                     l_r_nextState = STATE_2 ;
             end
 
-            // Stări pentru tratarea erorilor
-            // Dacă automatul ajunge în aceste stări se va reseta.
+            // Stari pentru tratarea erorilor
+            // Daca automatul ajunge in aceste stari se va reseta.
             STATE_5_PlaceHolder : begin
                 l_r_nextState = STATE_Initial ;
             end
