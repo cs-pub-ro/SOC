@@ -34,9 +34,25 @@ module ex2(
         end
     end
 
+    // Display your date and month of birth (e.g. 24.06)
     always @(*) begin
         case (l_r_currentState)
-            // TODO: Display digits 0123
+            STATE_0: begin
+                // TODO: FIRST digit (e.g. "2" -> 24.06)
+            end
+
+            STATE_1: begin
+                // TODO: SECOND digit (e.g. "4")
+                // Don't forget to separate the day and month!
+            end
+
+            STATE_2: begin
+                // TODO: THIRD digit (e.g. "0")
+            end
+
+            STATE_3: begin
+                // TODO: FOURTH digit (e.g. "6")
+            end
         endcase
     end    
 endmodule
