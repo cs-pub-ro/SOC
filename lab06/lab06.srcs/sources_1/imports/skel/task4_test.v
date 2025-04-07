@@ -9,12 +9,11 @@
 // Target Devices: 		Digilent Nexys 7
 //////////////////////////////////////////////////////////////////////////////////
 
-module test_task3;
+module task4_test;
     // Inputs
     reg[7:0] l_r_a;
     reg[7:0] l_r_b;
     reg[2:0] l_r_sel;
-    reg[7:0] i;
     reg l_r_clk;
     reg l_r_reset;
 
@@ -22,7 +21,7 @@ module test_task3;
     wire [7:0] l_w_out;
 
     // Local variables for loop
-    integer i,j,k;
+    integer i;
 
     // UUT initialization
     task4 #(.BOUNCE(5'd2)) l_m_task4(
