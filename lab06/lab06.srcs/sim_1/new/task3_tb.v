@@ -5,12 +5,12 @@
 // Computer Design 1
 //
 // Design Name:   		subtractor_8bit
-// Module Name:  		task3_test.v
+// Module Name:  		task3_tb.v
 // Project Name:		Laborator 6
 // Target Devices: 		Digilent Nexys 3
 //////////////////////////////////////////////////////////////////////////////////
 
-module task3_test;
+module task3_tb;
 
 	// Inputs
 	reg [7:0] l_r_A;
@@ -71,4 +71,3 @@ module task3_test;
 	end
       
 endmodule
-

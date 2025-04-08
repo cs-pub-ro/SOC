@@ -9,7 +9,7 @@
 // Target Devices: 		Digilent Nexys 7
 //////////////////////////////////////////////////////////////////////////////////
 
-module task4_test;
+module task4_tb;
     // Inputs
     reg[7:0] l_r_a;
     reg[7:0] l_r_b;

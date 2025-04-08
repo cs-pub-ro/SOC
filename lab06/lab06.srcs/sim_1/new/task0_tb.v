@@ -5,12 +5,12 @@
 // Computer Design 1
 //
 // Design Name:   		task0
-// Module Name:  		task0_test.v
+// Module Name:  		task0_tb.v
 // Project Name:		Laborator 6
 // Target Devices: 		Digilent Nexys 3
 //////////////////////////////////////////////////////////////////////////////////
 
-module task0_test;
+module task0_tb;
 
 	// Inputs
 	reg l_r_bit_A;
@@ -52,4 +52,3 @@ module task0_test;
 	end
       
 endmodule
-
