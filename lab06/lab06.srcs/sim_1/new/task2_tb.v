@@ -5,12 +5,12 @@
 // Computer Design 1
 //
 // Design Name:   		ripple_carry_8bit
-// Module Name:  		task2_test.v
+// Module Name:  		task2_tb.v
 // Project Name:		Laborator 6
 // Target Devices: 		Digilent Nexys 3
 //////////////////////////////////////////////////////////////////////////////////
 
-module task2_test;
+module task2_tb;
 
 	// Inputs
 	reg [7:0] l_r_A;
@@ -67,4 +67,3 @@ module task2_test;
 	end
       
 endmodule
-

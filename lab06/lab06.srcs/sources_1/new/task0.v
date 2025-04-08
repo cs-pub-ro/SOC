@@ -3,21 +3,22 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    16:38:57 04/03/2022 
+// Create Date: 04/08/2025 06:39:25 PM
 // Design Name: 
-// Module Name:    task0 
+// Module Name: task0
 // Project Name: 
 // Target Devices: 
-// Tool versions: 
+// Tool Versions: 
 // Description: 
-//
+// 
 // Dependencies: 
-//
-// Revision: 
+// 
+// Revision:
 // Revision 0.01 - File Created
-// Additional Comments: 
-//
+// Additional Comments:
+// 
 //////////////////////////////////////////////////////////////////////////////////
+
 module task0(
 		output wire o_w_sum,
 		output wire o_w_carry,
