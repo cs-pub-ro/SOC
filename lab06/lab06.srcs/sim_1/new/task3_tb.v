@@ -44,7 +44,12 @@ module task3_tb;
 		l_r_B = 5;
 		l_r_borrow_in = 0;
 
-		#100;        
+		#100;       
+
+		l_r_A = 5;
+		l_r_B = 30;
+
+		#100;
 		  
 		l_r_A = 100;
 		l_r_B = 37;
