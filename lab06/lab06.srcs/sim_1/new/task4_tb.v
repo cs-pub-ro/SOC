@@ -14,8 +14,6 @@ module task4_tb;
     reg[7:0] l_r_a;
     reg[7:0] l_r_b;
     reg[2:0] l_r_sel;
-    reg l_r_clk;
-    reg l_r_reset;
 
     // Outputs
     wire [7:0] l_w_out;
@@ -24,18 +22,13 @@ module task4_tb;
     integer i;
 
     // UUT initialization
-    task4 #(.BOUNCE(5'd2)) l_m_task4(
-        .o_w_out(l_w_out),
+    task4 l_m_task4(
+        .o_w_result(l_w_out),
         .i_w_a(l_r_a),
         .i_w_b(l_r_b),
-        .i_w_op_sel(l_r_sel),
-        .i_w_clk(l_r_clk),
-        .i_w_reset(l_r_reset)
+        .i_w_op_sel(l_r_sel)
     );
-
-    // CLK simulation
-    always #5 l_r_clk = ~l_r_clk;
-
+    
     //Simulation tests
     initial begin
         // wave files
@@ -49,13 +42,7 @@ module task4_tb;
             "l_r_a=%0d, ", l_r_a,
             "l_r_b=%0d, ", l_r_b,
             "l_r_sel=%0d, ", l_r_sel,
-            "l_r_reset=%0d, ", l_r_reset
             );
-
-        l_r_clk = 0;
-        l_r_reset = 1;
-        #10;
-        l_r_reset = 0;
 
         // Initialize Inputs
 		l_r_a = 30;
@@ -108,4 +95,5 @@ module task4_tb;
         // Finish the simulation
         $finish;
     end
+
 endmodule
